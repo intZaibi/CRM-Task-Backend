@@ -30,7 +30,7 @@ const signIn =  async (req, res) => {
       res.cookie('authToken', token, {
         httpOnly: true, // Prevents client-side scripts from accessing the cookie
         secure: true,
-        sameSite: 'None'
+        sameSite: 'None',
         maxAge: 24 * 60 * 60 * 1000,
       });
   
