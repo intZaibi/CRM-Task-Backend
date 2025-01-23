@@ -12,8 +12,6 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/crm_db
 // Middleware
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(express.urlencoded({extended: true}))
 app.use(cors({
   origin: 'https://crm-task-frontend.vercel.app', // Your frontend URL
   credentials: true, // Allow credentials (cookies)
