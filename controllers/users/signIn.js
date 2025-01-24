@@ -28,7 +28,7 @@ const signIn =  async (req, res) => {
   
       // Set token as an HTTP-only cookie
       res.cookie('authToken', token, {
-        httpOnly: true, // Prevents client-side scripts from accessing the cookie
+        //httpOnly: true, // Prevents client-side scripts from accessing the cookie
         secure: true,
         sameSite: 'None',
         maxAge: 24 * 60 * 60 * 1000,
