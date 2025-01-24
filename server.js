@@ -5,15 +5,17 @@ import leadRoutes from './routes/leadRoutes.js'; // Assuming leads routes are in
 import userRoutes from './routes/userRoutes.js'; // Assuming leads routes are in ./routes/leads
 import connectDB from './config/db.js'; // Assuming leads routes are in ./routes/leads
 import cookieParser from 'cookie-parser'
+import dotenv from 'dotenv';
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 8000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/crm_db'; // Replace with your MongoDB connection string
-
 // Middleware
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://crm-task-frontend.vercel.app', // Your frontend URL
+  origin: process.env.FRONTEND_BASE_URL, // Your frontend URL
   credentials: true, // Allow credentials (cookies)
 }));
 
