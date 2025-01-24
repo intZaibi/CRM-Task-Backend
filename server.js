@@ -27,7 +27,7 @@ try {
   connectDB(MONGODB_URI);
     
   app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on https://crm-task-backend-1.onrender.com:${PORT}`);
   });
 } catch (error) {
   console.log(error); 
