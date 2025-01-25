@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 
 const getVerified =  async (req, res) => {
-  
+  console.log(req.headers)
   try {
     const token = req.headers.authorization.split(' ')[1] || null;
 
